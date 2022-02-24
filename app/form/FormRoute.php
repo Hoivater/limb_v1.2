@@ -22,7 +22,7 @@ require "../../autoload.php";
 
 		function __construct($name_form, $data)
 		{
-			$this -> csrf = $_SESSION["csrfv"];
+			if(isset($_SESSION["csrfv"])) $this -> csrf = $_SESSION["csrfv"];
 			
 			parent::__construct($data);
 
